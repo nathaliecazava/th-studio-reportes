@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Casa Aire | Vol. 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --kraft:#E9E5DA;
+    --ink:#181613;
+    --olive:#5F5C43;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--kraft);
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    line-height:1.6;
+  }
+  .wrap{max-width:720px; margin:0 auto;}
+  header, footer{
+    background:var(--white);
+    padding:40px 32px;
+    text-align:center;
+  }
+  header .brand{
+    font-family:'Archivo', sans-serif;
+    font-weight:800;
+    letter-spacing:0.18em;
+    font-size:13px;
+    text-transform:uppercase;
+  }
+  .portada{
+    padding:64px 32px 48px;
+    text-align:center;
+  }
+  .portada h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:56px;
+    letter-spacing:0.02em;
+  }
+  .portada .vol{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.3em;
+    font-size:12px;
+    text-transform:uppercase;
+    margin-top:8px;
+    color:var(--olive);
+  }
+  .portada .meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    margin-top:20px;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+  .rule{
+    border:none;
+    border-top:1px solid rgba(24,22,19,0.25);
+    margin:0 32px;
+  }
+  section{padding:48px 32px;}
+  .section-label{
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
+    letter-spacing:0.14em;
+    font-size:12px;
+    text-transform:uppercase;
+    color:var(--olive);
+    margin-bottom:20px;
+  }
+  h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:30px;
+    margin-bottom:16px;
+  }
+  .ring{
+    font-family:'Cormorant Garamond', serif;
+    font-size:64px;
+    font-weight:500;
+    text-align:center;
+    margin:16px 0;
+  }
+  .ring-sub{
+    text-align:center;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--olive);
+    margin-bottom:32px;
+  }
+  ul.checklist{list-style:none;}
+  ul.checklist li{
+    padding:10px 0;
+    border-bottom:1px solid rgba(24,22,19,0.15);
+    font-size:14px;
+  }
+  ul.checklist li.done::before{content:"✓ "; color:var(--olive); font-weight:bold;}
+  ul.checklist li.pending::before{content:"— "; color:rgba(24,22,19,0.4);}
+  .pending-note{
+    font-style:italic;
+    font-size:13px;
+    color:var(--olive);
+    border:1px dashed rgba(95,92,67,0.5);
+    padding:16px;
+    margin-top:12px;
+  }
+  table{width:100%; border-collapse:collapse; font-size:13px;}
+  th, td{
+    text-align:left;
+    padding:10px 8px;
+    border-bottom:1px solid rgba(24,22,19,0.15);
+  }
+  th{
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--olive);
+  }
+  .phase-current{font-weight:700;}
+  .money-row{display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid rgba(24,22,19,0.15); font-size:14px;}
+  .money-row .label{text-transform:uppercase; letter-spacing:0.06em; font-size:12px; color:var(--olive);}
+  .money-row .value{font-family:'Cormorant Garamond', serif; font-size:22px;}
+  .boxes{display:flex; gap:16px; margin-top:20px;}
+  .box{flex:1; border:1px solid rgba(24,22,19,0.25); padding:16px; text-align:center;}
+  .box .label{font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--olive);}
+  .box .value{font-family:'Cormorant Garamond', serif; font-size:26px; margin-top:6px;}
+  .footnote{font-size:11px; color:rgba(24,22,19,0.55); margin-top:8px;}
+  .docs a{color:var(--ink);}
+  footer .sig{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:18px;
+    margin-bottom:8px;
+  }
+  footer .contact{font-size:12px; letter-spacing:0.05em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">TH STUDIO</div>
+  </header>
+
+  <div class="portada">
+    <h1>CASA AIRE</h1>
+    <div class="vol">VOL. 2</div>
+    <div class="meta">Juan Pablo España · Edificio Calle 3 · Apt 2020 · Medellín</div>
+  </div>
+
+  <hr class="rule">
+
+  <section id="estado">
+    <div class="section-label">01.1 · Estado</div>
+    <h2>25 de julio de 2026</h2>
+    <div class="ring">09</div>
+    <div class="ring-sub">Fase actual: Obra gris — en curso</div>
+    <ul class="checklist">
+      <li class="done">Diseño aprobado</li>
+      <li class="done">Presupuesto aprobado</li>
+      <li class="done">Equipos confirmados</li>
+      <li class="done">Kick-off de obra completado</li>
+      <li class="done">Demolición — zonas comunes</li>
+      <li class="pending">Demolición — cocina y baños, en curso</li>
+      <li class="pending">Muros nuevos en mampostería — en curso</li>
+    </ul>
+    <div class="footnote">Inicio de obra: 14 de julio de 2026</div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="galeria">
+    <div class="section-label">01.2 · La obra esta semana</div>
+    <div class="gallery-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-top:8px;">
+      <img src="assets/obra-01.jpg" alt="Área social — muros existentes y escombro" style="width:100%; display:block; object-fit:cover; aspect-ratio:4/3;">
+      <img src="assets/obra-02.jpg" alt="Muro nuevo en mampostería junto al ascensor" style="width:100%; display:block; object-fit:cover; aspect-ratio:4/3;">
+      <img src="assets/obra-03.jpg" alt="Muros nuevos en mampostería, habitación" style="width:100%; display:block; object-fit:cover; aspect-ratio:4/3;">
+      <img src="assets/obra-04.jpg" alt="Pasillo con muro nuevo en mampostería" style="width:100%; display:block; object-fit:cover; aspect-ratio:4/3;">
+      <img src="assets/obra-05.jpg" alt="Cocina y baño en demolición" style="width:100%; grid-column:1 / -1; display:block; object-fit:cover; aspect-ratio:16/9;">
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="cronograma">
+    <div class="section-label">01.3 · Cronograma</div>
+    <table>
+      <tr><th>Fase</th><th>Estado</th></tr>
+      <tr><td>01 · Visita al espacio</td><td>Completada</td></tr>
+      <tr><td>02 · Investigación y concepto de diseño</td><td>Completada</td></tr>
+      <tr><td>03 · Desarrollo del diseño</td><td>Completada</td></tr>
+      <tr><td>04 · Presupuesto y planificación</td><td>Completada</td></tr>
+      <tr><td>05 · Documentación técnica</td><td>Completada</td></tr>
+      <tr><td>06 · Contratación</td><td>Completada</td></tr>
+      <tr><td>07 · Preparación del sitio</td><td>Completada</td></tr>
+      <tr><td>08 · Demolición</td><td>En curso — cocina y baños</td></tr>
+      <tr class="phase-current"><td>09 · Obra gris</td><td>En curso — muros nuevos</td></tr>
+      <tr><td>10 · Obra blanca</td><td>Por iniciar</td></tr>
+      <tr><td>11 · Instalación y estilismo</td><td>Por iniciar</td></tr>
+      <tr><td>12 · Control de calidad</td><td>Por iniciar</td></tr>
+      <tr><td>13 · Entrega del proyecto</td><td>Por iniciar</td></tr>
+    </table>
+  </section>
+
+  <hr class="rule">
+
+  <section id="necesitamos">
+    <div class="section-label">01.4 · Necesitamos de ti</div>
+    <ul class="checklist">
+      <li class="pending">Medidas y fotos de las camas actuales — necesarias para definir la distribución final de iluminación.</li>
+    </ul>
+  </section>
+
+  <hr class="rule">
+
+  <section id="pagos">
+    <div class="section-label">01.5 · Pagos (COP)</div>
+    <div class="money-row"><span class="label">Valor total de la inversión</span><span class="value">$384.644.700</span></div>
+    <div class="money-row"><span class="label">Valor pagado</span><span class="value">$36.000.000</span></div>
+    <div class="money-row"><span class="label">Pendiente por pagar</span><span class="value">$348.644.700</span></div>
+
+    <div class="boxes">
+      <div class="box"><div class="label">Adicionales</div><div class="value">$0</div></div>
+      <div class="box"><div class="label">Imprevistos</div><div class="value">$1.350.000</div></div>
+    </div>
+
+    <h2 style="font-size:20px; margin-top:32px;">Pagos programados</h2>
+    <table>
+      <tr><th>Proveedor</th><th>Banco</th><th>Cuenta</th><th>Valor a pagar</th></tr>
+      <tr><td>DYD</td><td>Bancolombia — Corriente</td><td>100025911</td><td>$5.985.000</td></tr>
+      <tr><td>Elkin</td><td>Bancolombia — Ahorros</td><td>36235583555</td><td>$1.200.000</td></tr>
+      <tr><td>Francisco García</td><td>Bancolombia — Ahorros</td><td>37704566591</td><td>$5.800.000</td></tr>
+      <tr><td>Nathalie Castaño</td><td>Bancolombia — Ahorros</td><td>25975063502</td><td>$5.000.000</td></tr>
+      <tr><td>Qualita</td><td>Bancolombia — Corriente</td><td>24532706857</td><td>$4.770.000</td></tr>
+      <tr><td>Gustavo</td><td>Bancolombia — Ahorros</td><td>31170273799</td><td>$4.500.000</td></tr>
+    </table>
+  </section>
+
+  <hr class="rule">
+
+  <section id="documentos">
+    <div class="section-label">01.6 · Documentos</div>
+    <ul class="checklist docs">
+      <li class="done">Diseño aprobado — renders y planos</li>
+      <li class="done">Contrato y anexos</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="sig">Diseño con alma, ejecutado con orden.</div>
+    <div class="contact">Nathalie Castaño Zapata · Cel +57 321 7352426 · Medellín</div>
+  </footer>
+
+</div>
+</body>
+</html>
